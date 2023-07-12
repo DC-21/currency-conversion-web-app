@@ -64,7 +64,7 @@ const CurrencyConverter = () => {
       <div className="w-[300px] flex items-center justify-center">
         <label className="w-1/2 text-[#3c2572]">Base Currency:</label>
         <select
-          className="w-1/2 text-[#3c2572]"
+          className="w-1/2 text-[#3c2572] p-2 rounded"
           name="baseCurrency"
           value={baseCurrency}
           onChange={handleCurrencyChange}
@@ -75,7 +75,7 @@ const CurrencyConverter = () => {
       <div className="w-[300px] flex items-center justify-center pt-6">
         <label className="w-1/2 text-[#3c2572]">Target Currency:</label>
         <select
-          className="w-1/2 text-[#3c2572]"
+          className="w-1/2 text-[#3c2572] p-2 rounded"
           name="targetCurrency"
           value={targetCurrency}
           onChange={handleCurrencyChange}
