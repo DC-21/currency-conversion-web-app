@@ -1,6 +1,1 @@
-588640546caf4ff8a0e8ec1b280840e4 
-
-
-TLaZr5ZnQfKcj0gHDvTgkHeOmNpuEtnsEFwnnDn7
-
-https://api.freecurrencyapi.com/v1/latest?apikey=TLaZr5ZnQfKcj0gHDvTgkHeOmNpuEtnsEFwnnDn7
+https://v6.exchangerate-api.com/v6/5aa8c673225b4453d64db3b8/latest/USD

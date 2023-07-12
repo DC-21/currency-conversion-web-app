@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center py-4 px-3">
       <div className="flex flex-col items-center justify-center">
-        <p className="text-center text-3xl text-[#260c65]">
+        <p className="text-center text-3xl text-[#260c65] pb-4">
           Online Exchange Rates
         </p>
         <p className="text-center text-xl text-[#7560a5] pt-4">
