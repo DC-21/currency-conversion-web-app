@@ -43,11 +43,12 @@ const CurrencyConverter = () => {
       console.log('Exchange rates not available yet.');
       return;
     }
-
+  
     const rate = rates[targetCurrency];
     const converted = amount * rate;
     setConvertedAmount(converted);
   };
+  
 
   if (isLoading) {
     return <div>Loading...</div>;
