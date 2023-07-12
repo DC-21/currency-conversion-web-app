@@ -62,14 +62,14 @@ const CurrencyConverter = () => {
         </select>
       </div>
       <div>
-        <label>Amount:</label>
+        <label className='text-[#3c2572] text-center'>Amount:</label>
         <input type="number" value={amount} onChange={handleAmountChange} />
       </div>
       <div>
-        <button onClick={convertCurrency}>Convert</button>
+        <button className='text-[#3c2572]' onClick={convertCurrency}>Convert</button>
       </div>
       <div>
-        <h3>Converted Amount: {convertedAmount}</h3>
+        <h3 className='text-[#3c2572] text-center'>Converted Amount: {convertedAmount}</h3>
       </div>
     </div>
   );
