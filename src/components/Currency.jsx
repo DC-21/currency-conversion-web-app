@@ -7,6 +7,7 @@ const CurrencyConverter = () => {
   const [targetCurrency, setTargetCurrency] = useState('EUR');
   const [amount, setAmount] = useState(1);
   const [convertedAmount, setConvertedAmount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchExchangeRates = async () => {
@@ -15,8 +16,10 @@ const CurrencyConverter = () => {
           `https://api.freecurrencyapi.com/v1/latest?apikey=TLaZr5ZnQfKcj0gHDvTgkHeOmNpuEtnsEFwnnDn7&base_currency=${baseCurrency}`
         );
         setRates(response.data.rates);
+        setIsLoading(false);
       } catch (error) {
         console.log('Error fetching exchange rates:', error);
+        setIsLoading(false);
       }
     };
 
@@ -36,14 +39,24 @@ const CurrencyConverter = () => {
   };
 
   const convertCurrency = () => {
+    if (isLoading || Object.keys(rates).length === 0) {
+      console.log('Exchange rates not available yet.');
+      return;
+    }
+
     const rate = rates[targetCurrency];
     const converted = amount * rate;
     setConvertedAmount(converted);
   };
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+
   return (
     <div className='w-full flex flex-col items-center justify-center'>
-      <div className='w-full flex flex-col items-center'>
+      <div className='w-full flex items-center'>
         <label className='text-[#3c2572] text-center'>Base Currency:</label>
         <select className='text-[#3c2572] text-center' name="baseCurrency" value={baseCurrency} onChange={handleCurrencyChange}>
           <option value="USD">USD</option>
@@ -52,7 +65,7 @@ const CurrencyConverter = () => {
           {/* Add more currency options as needed */}
         </select>
       </div>
-      <div className='w-full flex flex-col items-center'>
+      <div className='w-full flex items-center'>
         <label className='text-[#3c2572] text-center'>Target Currency:</label>
         <select className='text-[#3c2572] text-center' name="targetCurrency" value={targetCurrency} onChange={handleCurrencyChange}>
           <option value="USD">USD</option>
@@ -61,12 +74,12 @@ const CurrencyConverter = () => {
           {/* Add more currency options as needed */}
         </select>
       </div>
-      <div className='w-full flex flex-col items-center'>
+      <div className='w-full flex items-center'>
         <label className='text-[#3c2572] text-center'>Amount:</label>
-        <input type="number" value={amount} onChange={handleAmountChange} />
+        <input className='text-right' type="number" value={amount} onChange={handleAmountChange} />
       </div>
       <div className='w-full flex flex-col items-center'>
-        <button className='text-[#3c2572]' onClick={convertCurrency}>Convert</button>
+        <button className='py-2 w-20 items-center text-center rounded bg-[#fe8267] text-white' onClick={convertCurrency}>Convert</button>
       </div>
       <div className='w-full flex flex-col items-center'>
         <h3 className='text-[#3c2572] text-center'>Converted Amount: {convertedAmount}</h3>
