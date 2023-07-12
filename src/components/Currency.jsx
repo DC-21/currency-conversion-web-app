@@ -73,9 +73,9 @@ const CurrencyConverter = () => {
           {/* Add more currency options as needed */}
         </select>
       </div>
-      <div className='w-full flex items-center justify-center pt-4'>
-        <label className='text-[#3c2572]'>Amount:</label>
-        <input className='text-right' type="number" value={amount} onChange={handleAmountChange} />
+      <div className='w-[300px] flex items-center justify-center pt-4'>
+        <label className='w-1/2 text-[#3c2572]'>Amount:</label>
+        <input className='w-1/2 text-left' type="number" value={amount} onChange={handleAmountChange} />
       </div>
       <div className='w-full flex flex-col items-center pt-8'>
         <button className='py-2 w-20 text-center rounded bg-[#fe8267] text-white' onClick={convertCurrency}>Convert</button>
