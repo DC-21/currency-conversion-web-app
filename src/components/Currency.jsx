@@ -86,7 +86,7 @@ const CurrencyConverter = () => {
       <div className="w-[300px] flex items-center justify-center pt-4">
         <label className="w-1/2 text-[#3c2572]">Amount:</label>
         <input
-          className="w-1/2 text-left"
+          className="w-1/2 text-left p-2"
           type="number"
           value={amount}
           onChange={handleAmountChange}
