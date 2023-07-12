@@ -3,10 +3,10 @@ import Currency from './Currency'
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center py-4 px-3">
+    <div className="w-full md:h-screen h-auto flex flex-col items-center justify-center py-4 px-3">
       <div className="flex flex-col items-center justify-center">
-        <p className="text-center text-3xl text-[#260c65] pb-4">
-          Online Exchange Rates
+        <p className="text-center text-3xl text-[#260c65] pb-4 font-bold">
+          Online Currency Exchange Rates
         </p>
         <p className="text-center text-xl text-[#7560a5] pt-4">
           The 100% free solution for handling exchange rate conversions.
