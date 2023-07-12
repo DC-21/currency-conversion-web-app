@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="md:py-4 py-0 px-3 items-center w-full">
-      <div className="container py-6 px-4 mx-auto rounded-lg flex items-center sm:flex-row flex-col bg-[#260c65]">
+      <div className="container py-3 px-4 mx-auto rounded-lg flex items-center sm:flex-row flex-col bg-[#260c65]">
         <p className="text-sm text-white sm:py-2 sm:mt-0 mt-0">
           © 2023 DC WRLD —
           <a href="https://twitter.com/dcwrld" className="text-white ml-1">
