@@ -42,33 +42,33 @@ const CurrencyConverter = () => {
   };
 
   return (
-    <div>
-      <div>
-        <label className='text-[#3c2572]'>Base Currency:</label>
-        <select className='text-[#3c2572]' name="baseCurrency" value={baseCurrency} onChange={handleCurrencyChange}>
+    <div className='w-full flex flex-col items-center justify-center'>
+      <div className='w-full flex flex-col items-center'>
+        <label className='text-[#3c2572] text-center'>Base Currency:</label>
+        <select className='text-[#3c2572] text-center' name="baseCurrency" value={baseCurrency} onChange={handleCurrencyChange}>
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
           <option value="GBP">GBP</option>
           {/* Add more currency options as needed */}
         </select>
       </div>
-      <div>
-        <label className='text-[#3c2572]'>Target Currency:</label>
-        <select className='text-[#3c2572]' name="targetCurrency" value={targetCurrency} onChange={handleCurrencyChange}>
+      <div className='w-full flex flex-col items-center'>
+        <label className='text-[#3c2572] text-center'>Target Currency:</label>
+        <select className='text-[#3c2572] text-center' name="targetCurrency" value={targetCurrency} onChange={handleCurrencyChange}>
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
           <option value="GBP">GBP</option>
           {/* Add more currency options as needed */}
         </select>
       </div>
-      <div>
+      <div className='w-full flex flex-col items-center'>
         <label className='text-[#3c2572] text-center'>Amount:</label>
         <input type="number" value={amount} onChange={handleAmountChange} />
       </div>
-      <div>
+      <div className='w-full flex flex-col items-center'>
         <button className='text-[#3c2572]' onClick={convertCurrency}>Convert</button>
       </div>
-      <div>
+      <div className='w-full flex flex-col items-center'>
         <h3 className='text-[#3c2572] text-center'>Converted Amount: {convertedAmount}</h3>
       </div>
     </div>
