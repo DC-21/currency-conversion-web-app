@@ -100,9 +100,10 @@ const CurrencyConverter = () => {
           Convert
         </button>
       </div>
-      <div className="w-full flex flex-col items-center pt-4">
-        <h3 className="text-[#3c2572]">
-          Converted Amount: {convertedAmount} {targetCurrency}
+      <div className="w-full flex flex-col items-center py-4">
+        <h3 className="text-[#3c2572] flex items-center gap-3">
+          Converted Amount: {convertedAmount}{" "}
+          <span className="font-bold">{targetCurrency}</span>
         </h3>
       </div>
     </div>
