@@ -39,7 +39,7 @@ const CurrencyConverter = () => {
   };
 
   const convertCurrency = () => {
-    if (isLoading || Object.keys(rates).length === 0) {
+    if (isLoading || !rates || Object.keys(rates).length === 0) {
       console.log('Exchange rates not available yet.');
       return;
     }
@@ -53,36 +53,35 @@ const CurrencyConverter = () => {
     return <div>Loading...</div>;
   }
 
-
   return (
     <div className='w-full flex flex-col items-center justify-center'>
-      <div className='w-full flex items-center'>
-        <label className='text-[#3c2572] text-center'>Base Currency:</label>
-        <select className='text-[#3c2572] text-center' name="baseCurrency" value={baseCurrency} onChange={handleCurrencyChange}>
+      <div className='w-[300px] flex items-center justify-center'>
+        <label className='w-1/2 text-[#3c2572]'>Base Currency:</label>
+        <select className='w-1/2 text-[#3c2572]' name="baseCurrency" value={baseCurrency} onChange={handleCurrencyChange}>
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
           <option value="GBP">GBP</option>
           {/* Add more currency options as needed */}
         </select>
       </div>
-      <div className='w-full flex items-center'>
-        <label className='text-[#3c2572] text-center'>Target Currency:</label>
-        <select className='text-[#3c2572] text-center' name="targetCurrency" value={targetCurrency} onChange={handleCurrencyChange}>
+      <div className='w-[300px] flex items-center justify-center pt-6'>
+        <label className='w-1/2 text-[#3c2572]'>Target Currency:</label>
+        <select className='w-1/2 text-[#3c2572]' name="targetCurrency" value={targetCurrency} onChange={handleCurrencyChange}>
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
           <option value="GBP">GBP</option>
           {/* Add more currency options as needed */}
         </select>
       </div>
-      <div className='w-full flex items-center'>
-        <label className='text-[#3c2572] text-center'>Amount:</label>
+      <div className='w-full flex items-center justify-center pt-4'>
+        <label className='text-[#3c2572]'>Amount:</label>
         <input className='text-right' type="number" value={amount} onChange={handleAmountChange} />
       </div>
-      <div className='w-full flex flex-col items-center'>
-        <button className='py-2 w-20 items-center text-center rounded bg-[#fe8267] text-white' onClick={convertCurrency}>Convert</button>
+      <div className='w-full flex flex-col items-center pt-8'>
+        <button className='py-2 w-20 text-center rounded bg-[#fe8267] text-white' onClick={convertCurrency}>Convert</button>
       </div>
-      <div className='w-full flex flex-col items-center'>
-        <h3 className='text-[#3c2572] text-center'>Converted Amount: {convertedAmount}</h3>
+      <div className='w-full flex flex-col items-center pt-4'>
+        <h3 className='text-[#3c2572]'>Converted Amount: {convertedAmount}</h3>
       </div>
     </div>
   );
