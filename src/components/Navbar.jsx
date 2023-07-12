@@ -16,8 +16,8 @@ const Navbar = () => {
                     <a>About</a>
                 </li>
             </ul>
-            <a className='py-2 w-14 items-center text-center rounded bg-[#fe8267]'>
-                Chat
+            <a className='py-2 w-20 items-center text-center rounded bg-[#fe8267]'>
+                Donate
             </a>
         </div>
     </div>
