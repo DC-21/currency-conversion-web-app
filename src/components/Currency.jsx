@@ -53,6 +53,12 @@ const CurrencyConverter = () => {
     return <div>Loading...</div>;
   }
 
+  const currencyOptions = Object.keys(rates).map((currency) => (
+    <option key={currency} value={currency}>
+      {currency}
+    </option>
+  ));
+
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="w-[300px] flex items-center justify-center">
@@ -63,10 +69,7 @@ const CurrencyConverter = () => {
           value={baseCurrency}
           onChange={handleCurrencyChange}
         >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-          {/* Add more currency options as needed */}
+          {currencyOptions}
         </select>
       </div>
       <div className="w-[300px] flex items-center justify-center pt-6">
@@ -77,10 +80,7 @@ const CurrencyConverter = () => {
           value={targetCurrency}
           onChange={handleCurrencyChange}
         >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-          {/* Add more currency options as needed */}
+          {currencyOptions}
         </select>
       </div>
       <div className="w-[300px] flex items-center justify-center pt-4">
@@ -101,7 +101,9 @@ const CurrencyConverter = () => {
         </button>
       </div>
       <div className="w-full flex flex-col items-center pt-4">
-        <h3 className="text-[#3c2572]">Converted Amount: {convertedAmount}</h3>
+        <h3 className="text-[#3c2572]">
+          Converted Amount: {convertedAmount} {targetCurrency}
+        </h3>
       </div>
     </div>
   );
