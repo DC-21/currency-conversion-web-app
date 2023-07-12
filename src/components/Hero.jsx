@@ -1,4 +1,5 @@
 import React from "react";
+import Currency from './Currency'
 
 const Hero = () => {
   return (
@@ -14,7 +15,9 @@ const Hero = () => {
           currency conversion website provides live & historical exchange rate data ranging
           from 2000 until today.</p>
       </div>
-      <div></div>
+      <div className="items-center justify-center pt-8">
+        <Currency/>
+      </div>
     </div>
   );
 };
