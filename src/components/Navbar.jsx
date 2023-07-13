@@ -7,7 +7,7 @@ const Navbar = () => {
             <a className='text-white font-bold'>
               DiCE
             </a>
-            <a className='py-2 w-20 items-center text-center rounded bg-[#fe8267]'>
+            <a href='https://bmc.link/cholahkuboQ' className='py-2 w-20 items-center text-center rounded bg-[#fe8267]'>
                 Donate
             </a>
         </div>
