@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="py-0 px-3 items-center w-full">
       <div className="container py-3 px-4 mx-auto rounded-lg flex items-center sm:flex-row flex-col bg-[#260c65]">
         <p className="text-sm text-white sm:py-2 sm:mt-0 mt-0">
-          <span>DiCE</span> © 2023 DC WRLD —
+          <span className="text-l text-white font-bold">DiCE</span> © 2023 DC WRLD —
           <a href="https://twitter.com/dcwrld" className="text-white ml-1">
             @dc wrld
           </a>
