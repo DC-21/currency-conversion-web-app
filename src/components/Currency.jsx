@@ -46,7 +46,8 @@ const CurrencyConverter = () => {
 
     const rate = rates[targetCurrency];
     const converted = amount * rate;
-    setConvertedAmount(converted);
+    const roundedConverted = Number(converted.toFixed(2));
+    setConvertedAmount(roundedConverted);
   };
 
   if (isLoading) {
